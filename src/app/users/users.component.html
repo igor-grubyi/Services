@@ -1,0 +1,25 @@
+<div *ngIf = '_needLogIn == true'>
+  <br>
+  <br>
+  <p>
+      <label>Login:</label>
+      <input type="text" #inputLogin>  
+
+      <label>Password:</label>
+      <input type="password" #inputPass>   
+  </p>
+  <p>
+      <button type="submit"  
+          (click)='onLogin(inputLogin, inputPass)'>Login</button>
+    
+     <label> or </label>                
+
+      <button type="submit" 
+          (click)='onRegister(inputLogin, inputPass)'>Register</button>
+  </p>
+</div> 
+
+<div *ngIf = '_needLogIn == false'>
+    <h2> Welcome on board, {{_userName}}</h2>
+</div>
+
